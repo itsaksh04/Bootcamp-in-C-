@@ -2,23 +2,26 @@
 void sort(int[],int);
 int main()
 {
-   int a[10],i;
-   printf("Enter the 10 value =");
-   for(i=0;i<10;i++)
+   int n,i;
+   printf("How many no you want to enter =");
+   scanf("%d",&n);
+   int a[n];
+   printf("Enter the %d value =",n);
+   for(i=0;i<n;i++)
         scanf("%d",&a[i]);
-   sort(a,10);
+   sort(a,n);
 
    return 0;
 }
 void sort(int a[],int n)
 {
     int i,j,temp;
-    for(i=0;i<10;i++)
+    for(i=0;i<n;i++)
         printf("%d ",a[i]);
     printf("\n");
-    for(i=0;i<9;i++)
+    for(i=0;i<n-1;i++)
     {
-        for(j=i+1;j<10;j++)
+        for(j=i+1;j<n;j++)
         {
             if(a[i]>a[j])
             {
@@ -29,8 +32,9 @@ void sort(int a[],int n)
         }
     }
     printf("\n");
-    for(i=0;i<10;i++)
+    for(i=0;i<n;i++)
         printf("%d ",a[i]);
 
 }
+
 

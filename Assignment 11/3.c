@@ -1,15 +1,18 @@
 #include<stdio.h>
-void prime(int);
+int prime(int);
 int main()
 {
-    int p;
+    int p, a;
     printf("Enter the number to check prime no =");
     scanf("%d",&p);
-    prime(p);
-
+    a=prime(p);
+    if(a==1)
+        printf("Prime no");
+    else
+        printf("Not prime no");
     return 0;
 }
-void prime(int p)
+int prime (int p)
 {
     int i;
     for(i=2;i<=p;i++)
@@ -17,11 +20,12 @@ void prime(int p)
         if(p%i==0)
         {
             if(p==i)
-                printf("Prime no");
+                return 1;
             else
-                printf("Not prime no");
+                return 0;
 
             break;
         }
     }
+    
 }

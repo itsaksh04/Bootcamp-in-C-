@@ -11,7 +11,7 @@ int main()
 }
 int reverce(int n)
 {
-    int rem,sum=0;
+    int rem=0,sum=0;
     if(n)
     {
         rem=n%10;
@@ -20,6 +20,9 @@ int reverce(int n)
         
     }
     else 
-       return sum;
+    {
+        return sum;
+    }
+
     return sum;
 }
